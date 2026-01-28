@@ -1,31 +1,39 @@
-# Praticando Python: trabalhando com projetos 🐍
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-Repositório com exercícios e pequenos projetos desenvolvidos durante o curso
-**Praticando Python: trabalhando com projetos**, da Alura.
+<body>
+  <h1>🐍 Praticando Python: trabalhando com projetos (Alura)</h1>
 
-O foco deste repositório é praticar os fundamentos do Python por meio de scripts
-independentes, aplicando boas práticas de codificação, organização e tratamento
-de erros.
+  <p>
+    Este repositório reúne exercícios e pequenos projetos desenvolvidos durante o curso
+    <strong>"Praticando Python: trabalhando com projetos"</strong> da Alura.
+    A ideia é praticar fundamentos de Python com foco em
+    <strong>organização, legibilidade, modularização e robustez</strong>.
+  </p>
 
----
+  <hr />
 
-## 🎯 Objetivos do curso
+  <h2>🎯 O que foi praticado</h2>
+  <ul>
+    <li>Estruturar código de forma <strong>organizada e modular</strong></li>
+    <li>Uso eficiente de <strong>funções, listas, dicionários</strong> e <strong>laços</strong></li>
+    <li><strong>Tratamento de erros</strong> e validação de entrada do usuário</li>
+    <li>Boas práticas seguindo a <strong>PEP 8</strong> (legibilidade e consistência)</li>
+  </ul>
 
-Durante o desenvolvimento dos exercícios, foram praticados os seguintes pontos:
+  <hr />
 
-- Estruturação de código de forma organizada e modular
-- Uso eficiente de funções, listas, dicionários e estruturas de repetição
-- Identificação e tratamento de erros comuns
-- Aplicação das boas práticas de codificação seguindo a PEP 8
-- Escrita de código legível, reutilizável e fácil de manter
+  <h2>📁 Estrutura do repositório</h2>
+  <p>
+    O projeto é uma pasta “seca”, contendo scripts independentes (<code>.py</code>),
+    cada um resolvendo um exercício específico:
+  </p>
 
----
-
-## 📁 Estrutura do repositório
-
-O repositório possui uma estrutura simples, composta por scripts independentes,
-cada um resolvendo um problema específico:
-
+  <pre>
 .
 ├── soma_numeros.py
 ├── adivinhar_numero.py
@@ -38,91 +46,93 @@ cada um resolvendo um problema específico:
 ├── pedra_papel_tesoura.py
 ├── selenium_code.py
 └── README.md
+  </pre>
 
----
+  <hr />
 
-## 📌 Descrição dos scripts
+  <h2>📌 Scripts incluídos</h2>
 
-- soma_numeros.py  
-  Realiza a soma de dois números informados pelo usuário, com tratamento de erros.
+  <h3>🔹 Básicos e utilitários</h3>
+  <ul>
+    <li><strong>soma_numeros.py</strong> – Soma dois números informados pelo usuário (com tratamento de erros).</li>
+    <li><strong>contar_vogais.py</strong> – Conta vogais em um texto.</li>
+    <li><strong>palavras_longas.py</strong> – Retorna palavras com mais de 10 caracteres.</li>
+    <li><strong>contrador_de_palavras.py</strong> – Conta palavras únicas (normaliza texto e remove acentuação).</li>
+    <li><strong>limpar_valor.py</strong> – Exemplo de formatação monetária no padrão brasileiro.</li>
+  </ul>
 
-- adivinhar_numero.py  
-  Jogo de adivinhação onde o usuário tenta descobrir um número aleatório entre 1 e 100.
+  <h3>🔹 Mini-projetos</h3>
+  <ul>
+    <li><strong>adivinhar_numero.py</strong> – Jogo: adivinhe o número de 1 a 100.</li>
+    <li><strong>pedra_papel_tesoura.py</strong> – Jogo contra o computador (pedra/papel/tesoura).</li>
+    <li><strong>gerador_senha.py</strong> – Gera senha aleatória (letras, números e especiais).</li>
+    <li><strong>calcular_gorjeta.py</strong> – Calcula gorjeta e total com parsing de valores (R$).</li>
+  </ul>
 
-- calcular_gorjeta.py  
-  Calcula o valor da gorjeta e o total da conta, tratando diferentes formatos de entrada monetária.
+  <h3>🔹 Automação (extra)</h3>
+  <ul>
+    <li><strong>selenium_code.py</strong> – Exemplo de automação com Selenium usando <code>WebDriverWait</code>.</li>
+  </ul>
 
-- contar_vogais.py  
-  Conta a quantidade de vogais em um texto informado pelo usuário.
+  <hr />
 
-- contrador_de_palavras.py  
-  Conta palavras únicas em uma frase, normalizando o texto e removendo acentuação.
+  <h2>▶️ Como executar</h2>
+  <p>Execute qualquer script individualmente pelo terminal:</p>
 
-- gerador_senha.py  
-  Gera uma senha aleatória contendo letras maiúsculas, minúsculas, números e caracteres especiais.
-
-- limpar_valor.py  
-  Exemplo simples de formatação de valores monetários no padrão brasileiro.
-
-- palavras_longas.py  
-  Identifica palavras com mais de 10 caracteres em um texto.
-
-- pedra_papel_tesoura.py  
-  Jogo clássico de pedra, papel e tesoura contra o computador.
-
-- selenium_code.py  
-  Exemplo de automação utilizando Selenium e WebDriverWait.
-
----
-
-## ▶️ Como executar
-
-Certifique-se de ter o Python 3 instalado.
-
-Execute qualquer script individualmente com:
-
+  <pre>
 python nome_do_arquivo.py
+  </pre>
 
-Exemplo:
+  <p>Exemplo:</p>
 
+  <pre>
 python adivinhar_numero.py
+  </pre>
 
----
+  <hr />
 
-## 📦 Dependências
+  <h2>📦 Dependências</h2>
+  <p>Alguns scripts utilizam bibliotecas externas:</p>
 
-Alguns scripts utilizam bibliotecas externas:
+  <ul>
+    <li><strong>colorama</strong> – para cores no terminal</li>
+    <li><strong>selenium</strong> – para automação no navegador</li>
+  </ul>
 
-- colorama
-- selenium
-
-Instale as dependências com:
-
+  <p>Instalação:</p>
+  <pre>
 pip install colorama selenium
+  </pre>
 
-Para o script selenium_code.py, é necessário possuir o ChromeDriver compatível
-com a versão do Google Chrome instalada na máquina.
+  <p>
+    <strong>Observação (Selenium):</strong> para executar <code>selenium_code.py</code>, você precisa ter o
+    <strong>ChromeDriver</strong> compatível com a versão do Google Chrome instalada.
+  </p>
 
----
+  <hr />
 
-## 🧹 Boas práticas aplicadas
+  <h2>🧹 Boas práticas aplicadas</h2>
+  <ul>
+    <li>Separação de lógica em <strong>funções</strong> (quando faz sentido)</li>
+    <li>Validação de entradas e tratamento de exceções com <code>try/except</code></li>
+    <li>Execução controlada com <code>if __name__ == "__main__":</code></li>
+    <li>Foco em legibilidade e consistência (PEP 8)</li>
+  </ul>
 
-- Uso de funções para separar responsabilidades
-- Validação das entradas do usuário
-- Tratamento de exceções com try/except
-- Uso do bloco if __name__ == "__main__"
-- Código legível seguindo os padrões da PEP 8
+  <hr />
 
----
+  <h2>📚 Objetivo deste repositório</h2>
+  <ul>
+    <li>Praticar Python com exercícios reais e pequenos projetos</li>
+    <li>Reforçar fundamentos e boas práticas</li>
+    <li>Servir como material de consulta rápida</li>
+  </ul>
 
-## 📚 Observações
+  <hr />
 
-Este repositório tem finalidade educacional e serve como prática dos conteúdos
-abordados no curso da Alura.
-
----
-
-## 📄 Licença
-
-Projeto de uso educacional.
-Sinta-se à vontade para estudar, modificar e evoluir o código.
+  <h2>📄 Licença</h2>
+  <p>
+    Projeto de uso educacional. Sinta-se à vontade para estudar, modificar e evoluir o código.
+  </p>
+</body>
+</html>
