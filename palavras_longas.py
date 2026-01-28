@@ -1,26 +1,26 @@
-from colorama import Fore, Style
+from print_colorido import print_color
 
 def palavras_longas(txt):
-    palavras_list = str(txt).split()
+	palavras_list = str(txt).split()
 
-    palavras_grandes = []
-    for palavra in palavras_list:
-        if len(palavra) > 10:
-            palavras_grandes.append(palavra)
+	palavras_grandes = []
+	for palavra in palavras_list:
+		if len(palavra) > 10:
+			palavras_grandes.append(palavra)
 
-    return palavras_grandes
+	return palavras_grandes
 
 if __name__ == "__main__":
-    while True:
-        texto = str(input("Digite um texto: "))
-        if not texto:
-            print(f"{Fore.YELLOW}Digite um texto valido!\n{Style.RESET_ALL}")
-        else:
-            break
+	while True:
+		texto = str(input("Digite um texto: "))
+		if not texto:
+			print_color("yellow", "Digite um texto valido!\n")
+		else:
+			break
 
-    palavras = palavras_longas(texto)
+	palavras = palavras_longas(texto)
 
-    if not palavras:
-        print(f"{Fore.CYAN}\nNenhuma palavra longa foi encontrada no texto.{Style.RESET_ALL}")
-    else:
-        print(f"{Fore.GREEN}\nPalavras longas encontradas: {palavras}{Style.RESET_ALL}")
+	if not palavras:
+		print_color("cyan", "\nNenhuma palavra longa foi encontrada no texto.")
+	else:
+		print_color("green", f"\nPalavras longas encontradas: {palavras}")

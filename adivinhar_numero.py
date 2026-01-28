@@ -1,29 +1,22 @@
 import random
-
-
-def adivinhar_numero():
-    numero_secreto = random.randint(1, 100)
-    tentativas = 0
-
-    while True:
-        try:
-            palpite = int(input("Tente adivinhar o número (1-100): "))
-
-            if not 1 <= palpite <= 100:
-                raise ValueError("Número fora do intervalo! Digite um número entre 1 e 100.")
-
-            tentativas += 1
-
-            if palpite < numero_secreto:
-                print("Muito baixo! Tente novamente.")
-            elif palpite > numero_secreto:
-                print("Muito alto! Tente novamente.")
-            else:
-                print(f"Parabéns! Você acertou o número {numero_secreto} em {tentativas} tentativas.")
-                break
-
-        except ValueError as e:
-            print(f"Entrada inválida: {e}")
+from print_colorido import print_color
 
 if __name__ == "__main__":
-    adivinhar_numero()
+    acertou = None
+    numero_escolha_bot = random.randint(1, 100)
+
+    while not acertou:
+        while True:
+            try:
+                numero_escolha = int(input("\nTente adivinhar o número (1-100): "))
+                break
+            except ValueError as e:
+                print_color("red", f"Entrada inválida: {e}")
+
+        if numero_escolha_bot > numero_escolha:
+            print_color("yellow", f"Muito baixo! Tente novamente: {numero_escolha}")
+        elif numero_escolha_bot < numero_escolha:
+            print_color("yellow", f"Muito alto! Tente novamente: {numero_escolha}")
+        else:
+            print_color("green", f"Parabéns! Você acertou o número {numero_escolha_bot}.")
+            acertou = True

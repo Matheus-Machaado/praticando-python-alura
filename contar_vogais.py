@@ -1,26 +1,26 @@
-from colorama import Fore, Style
+from print_colorido import print_color
 
 def contador_vogais(txt):
-    vogais = "aeiou"
-    quantidade = 0
+	vogais = "aeiou"
+	quantidade = 0
 
-    for letra in txt.lower():
-        if letra in vogais:
-            quantidade += 1
+	for letra in txt.lower():
+		if letra in vogais:
+			quantidade += 1
 
-    return quantidade
+	return quantidade
 
 if __name__ == "__main__":
-    while True:
-        texto = str(input("Digite um texto: "))
-        if not texto:
-            print(f"{Fore.YELLOW}Digite um texto valido!\n{Style.RESET_ALL}")
-        else:
-            break
+	while True:
+		texto = str(input("Digite um texto: "))
+		if not texto:
+			print_color("yellow", "Digite um texto valido!\n")
+		else:
+			break
 
-    quantidade_vogais = contador_vogais(texto)
+	quantidade_vogais = contador_vogais(texto)
 
-    if quantidade_vogais == 0:
-        print(f"{Fore.CYAN}\nO texto '{texto}' nao contém vogais. {Style.RESET_ALL}")
-    else:
-        print(f"{Fore.GREEN}\nO texto '{texto}' contém {quantidade_vogais} vogais. {Style.RESET_ALL}")
+	if quantidade_vogais == 0:
+		print_color("cyan", f"\nO texto '{texto}' nao contém vogais.")
+	else:
+		print_color("green", f"\nO texto '{texto}' contém {quantidade_vogais} vogais.")
